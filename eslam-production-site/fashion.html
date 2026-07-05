@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fashion Retouch — Eslam Production</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="corner corner-tr"></div>
+<div class="corner corner-bl"></div>
+
+<header>
+  <div class="logo">Eslam Production</div>
+  <nav>
+    <ul>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#about">About Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section">
+    <a class="back-link" href="index.html">&larr; Back to Galleries</a>
+    <div class="eyebrow">Fashion Retouch</div>
+    <h1 class="hero-title"><span>Fashion</span> Gallery</h1>
+    <p class="hero-sub">Editorial and lookbook retouching — polished, on-brand, and campaign-ready.</p>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="editorial">Fashion Editorial</button>
+      <button class="tab-btn" data-tab="lookbook">Fashion Lookbook</button>
+    </div>
+
+    <div class="tab-panel active" id="editorial">
+      <div class="panel-heading">Fashion Editorial</div>
+      <div class="photo-grid">
+      <div class="photo">
+        <img src="images/fashion/editorial/1.jpg" alt="photo 1" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/editorial/2.jpg" alt="photo 2" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/editorial/3.jpg" alt="photo 3" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/editorial/4.jpg" alt="photo 4" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/editorial/5.jpg" alt="photo 5" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/editorial/6.jpg" alt="photo 6" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/editorial/7.jpg" alt="photo 7" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/editorial/8.jpg" alt="photo 8" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="lookbook">
+      <div class="panel-heading">Fashion Lookbook</div>
+      <div class="photo-grid">
+      <div class="photo">
+        <img src="images/fashion/lookbook/1.jpg" alt="photo 1" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/lookbook/2.jpg" alt="photo 2" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/lookbook/3.jpg" alt="photo 3" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/lookbook/4.jpg" alt="photo 4" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/lookbook/5.jpg" alt="photo 5" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/lookbook/6.jpg" alt="photo 6" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/lookbook/7.jpg" alt="photo 7" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      <div class="photo">
+        <img src="images/fashion/lookbook/8.jpg" alt="photo 8" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('empty')">
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="thanks">Thank you for choosing Eslam Production</div>
+  <div class="fine">&copy; 2026 Eslam Production &mdash; Professional Retouching Studio</div>
+</footer>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(tab).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
